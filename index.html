@@ -116,23 +116,60 @@ section{position:relative;min-height:100svh;display:flex;overflow:hidden;}
 .ac-role{font-size:7.5px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;background:rgba(201,169,110,.1);padding:4px 12px;margin-bottom:6px;}.ac-spec{font-family:'Playfair Display',serif;font-size:clamp(12px,1.1vw,15px);font-weight:700;color:var(--white);margin-bottom:10px;text-align:center;}
 .ac-desc{font-size:clamp(10px,.85vw,12px);color:var(--grey-l);text-align:center;line-height:1.55;}
 @media(max-width:650px){
-  .as-cards{flex-direction:column;gap:14px;padding:16px 4vw 70px;}
-  /* Card : photo à gauche (fixe), texte à droite en colonne */
+  /* Cards en colonne, espacées */
+  .as-cards{
+    flex-direction:column;
+    gap:16px;
+    padding:20px 4vw 70px;
+  }
+  /* Chaque card : colonne centrée, portrait en haut */
   .ac{
-    flex-direction:row;align-items:center;
-    gap:16px;padding:16px;
+    flex-direction:column;
+    align-items:center;
+    padding:24px 20px 20px;
+    text-align:center;
     min-height:auto;
+    gap:0;
   }
+  /* Photo — bonne taille, centrée */
   .ac img{
-    width:80px;height:80px;
-    flex-shrink:0;margin-bottom:0;
+    width:100px;
+    height:100px;
+    flex-shrink:0;
+    margin-bottom:14px;
   }
-  /* Colonne texte à droite */
-  .ac-texts{display:flex;flex-direction:column;align-items:flex-start;gap:4px;flex:1;min-width:0;}
-  .ac-name{text-align:left;font-size:clamp(15px,4.5vw,18px);margin-bottom:0;}
-  .ac-role{font-size:7.5px;letter-spacing:1.5px;margin-bottom:2px;}
-  .ac-spec{font-size:clamp(13px,3.8vw,16px);margin-bottom:4px;text-align:left;}
-  .ac-desc{text-align:left;font-size:10.5px;line-height:1.45;color:var(--grey-l);}
+  /* Bloc texte — pleine largeur, centré */
+  .ac-texts{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+    width:100%;
+  }
+  .ac-name{
+    text-align:center;
+    font-size:18px;
+    margin-bottom:2px;
+  }
+  .ac-role{
+    font-size:8px;
+    letter-spacing:2px;
+    margin-bottom:4px;
+    text-align:center;
+  }
+  .ac-spec{
+    font-size:16px;
+    font-weight:700;
+    text-align:center;
+    margin-bottom:6px;
+  }
+  .ac-desc{
+    text-align:center;
+    font-size:12px;
+    line-height:1.55;
+    color:var(--grey-l);
+    max-width:320px;
+  }
 }
 
 /* ════════════════════════════════════════
